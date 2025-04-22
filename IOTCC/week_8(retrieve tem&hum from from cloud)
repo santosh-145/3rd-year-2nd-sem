@@ -1,11 +1,11 @@
 #include <DHT.h>
 #include <DHT_U.h>
 #include <ESP8266WiFi.h>
-String apiKey = "YGPSDC57B4R0M50U"; 
-const char *ssid = "-----"; 
-const char *pass = "-------";
+String apiKey = "GQC4YC7AWAL5PT7X"; 
+const char *ssid = "XXXXXX"; 
+const char *pass = "XXXXXX";
 const char* server = "api.thingspeak.com";
-#define DHTPIN D4
+#define DHTPIN D1
 DHT dht(DHTPIN, DHT11);
 WiFiClient client;
 
@@ -19,7 +19,7 @@ void setup()
  WiFi.begin(ssid, pass);
  while (WiFi.status() != WL_CONNECTED) 
  {
- delay(500);
+ delay(2000);
  Serial.print(".");
  }
 Serial.println("");
@@ -38,11 +38,15 @@ if (client.connect(server,80))
 {
  String postStr = apiKey;
  postStr +="&field1=";
- postStr += String(h);
- postStr +="&field2=";
  postStr += String(t);
+ postStr +="&field2=";
+ postStr += String(h);
  postStr += "\r\n\r\n";
+client.print("POST /update HTTP/1.1\n");
+client.print("Host: api.thingspeak.com\n");
+client.print("Connection: close\n");
 client.print("X-THINGSPEAKAPIKEY: "+apiKey+"\n");
+client.print("Content-Type: application/x-www-form-urlencoded\n");
 client.print("Content-Length: ");
 client.print(postStr.length());
 client.print("\n\n");
