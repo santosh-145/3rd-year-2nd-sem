@@ -1,0 +1,234 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1276,3112" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="covid_output" />
+      <Variable x:TypeArguments="x:String" Name="stringOutputText" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[covid_output]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="574,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="22r01a05d4.xlsx" />
+    <ui:OutputDataTable DataTable="[covid_output]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="574,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[stringOutputText]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="574,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[stringOutputText]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[covid_output]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574,2740" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572,2569" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="cvd_date" />
+              <Variable x:TypeArguments="s:DateTime" Name="Testdate" />
+              <Variable x:TypeArguments="x:String" Name="Region" />
+              <Variable x:TypeArguments="x:String" Name="Testresult" />
+              <Variable x:TypeArguments="x:String" Name="Testtype" />
+              <Variable x:TypeArguments="x:String" Name="Comments" />
+              <Variable x:TypeArguments="x:String" Name="Name" />
+              <Variable x:TypeArguments="x:String" Name="Emaiid" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="0" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="s:DateTime">[Testdate]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_2" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[Region]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[Testresult]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="3" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[Testtype]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="4" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[Comments]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="5" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[Name]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="6" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="538,219" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[Emaiid]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="538,976" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="9f26c3bb-133c-45f3-8bfb-c0ea90a2a971">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,686" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:WordApplicationScope SensitivityLabel="{x:Null}" DisplayName="Word Application Scope" FilePath="22r01a05d4.docx" sap:VirtualizedContainerService.HintSize="470,624" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1" SensitivityOperation="None">
+                      <p:WordApplicationScope.Body>
+                        <ActivityAction x:TypeArguments="ui:WordDocument">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,501" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="textastobetype" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[textastobetype]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["----------------------------------------------------------COVID-19 Test Report----------------------------------------------------------" &amp; Environment.NewLine &amp; "Name: " &amp; Name &amp; Environment.NewLine &amp; "Test Date: " &amp; Testdate.ToString() &amp; Environment.NewLine &amp; "Test Result: " &amp; Testresult &amp; Environment.NewLine &amp; "Test Type: " &amp; Testtype &amp; Environment.NewLine &amp; "Comments: " &amp; Comments &amp; Environment.NewLine &amp; "--------------------------------------------------------------------------" &amp; Environment.NewLine &amp; "Email ID: " &amp; Emaiid]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="[textastobetype]" />
+                            <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="REPORT.pdf" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+                          </Sequence>
+                        </ActivityAction>
+                      </p:WordApplicationScope.Body>
+                    </p:WordApplicationScope>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1936, 1048" Arguments="c:\users\student\documents\uipath\week13\22r01a05d4.docx" ContentHash="G2IiP88Bd0CO393jNLAiFg" FilePath="C:\Program Files (x86)\Microsoft Office\Office12\winword.exe" IconBase64="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" InformativeScreenshot="65c6db19d097e1813f59a33067117267.png" Reference="NYcMq9RqcE2xlht04ihuSw/uVSvqzvlZkqr7UyH5qdlKw" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='22r01a05d4 - Microsoft Word' /&gt;" Version="V2" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
