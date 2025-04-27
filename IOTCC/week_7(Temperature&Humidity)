@@ -2,7 +2,7 @@
 #include <DHT_U.h>
 #include <ESP8266WiFi.h>
 
-String apiKey = "I4Q53Y5KR7C3YWQM";  // ThingSpeak API key
+String apiKey = "I4Q53Y5KR7C3YWQM";  // ThingSpeak write API key
 const char *ssid = "OnePlus Nord CE4";
 const char *pass = "********";
 const char* server = "api.thingspeak.com";
