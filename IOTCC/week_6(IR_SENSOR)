@@ -1,5 +1,7 @@
-1)create new channel---> IR Data
-2)Sketch-->Include Library--> manage Library-->esp8266
+1)create new channel---> Field(IR Data)
+2)Sketch -->Include Library --> manage Library --> esp8266(Arduino uno WiFi Dev),ThingSpeak
+3)Tools -->Board:"NodeMCU 1.0 (ESP-12E Module)" ---> Board Manager -->ESP8266 -->install
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #include <ESP8266WiFi.h>
 String apiKey = "HF1I2YKT254XP5NR";  // write API key   
 const char *ssid =  "abc";     
