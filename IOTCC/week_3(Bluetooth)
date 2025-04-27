@@ -1,6 +1,9 @@
+Application: Serial Bluetooth Terminal 
+Hardware: Bluetooth Sensor HC 05
+---------------------------------------------------------------------------------------
 #include <SoftwareSerial.h>
-SoftwareSerial Bluetooth(8,9);
-int LED=13;
+SoftwareSerial Bluetooth(8,9); //(RX,TX to Arduino)
+int LED=13;  //on-board LED
 int Data;
 void setup() {
   // put your setup code here, to run once:
