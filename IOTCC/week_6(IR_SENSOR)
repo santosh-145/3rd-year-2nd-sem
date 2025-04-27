@@ -1,5 +1,5 @@
 #include <ESP8266WiFi.h>
-String apiKey = "HF1I2YKT254XP5NR";     
+String apiKey = "HF1I2YKT254XP5NR";  // write API key   
 const char *ssid =  "abc";     
 const char *pass =  "1234567890";
 const char* server = "api.thingspeak.com";
