@@ -1,3 +1,8 @@
+1)we need to install MFRC522 Library to communicate with RFID
+2)Sketch --> Include Libraries --> Manage Libraries --> Type = MFRC522 version 1.4.10 by Github Community
+(OR) File --> Examples --> MFRC522 --> DumpInfo or ReadInfo or WriteInfo.
+3)Make connections as per the Below Table MFRC522 Reader and Arduino Uno.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
  * Write personal data of a MIFARE RFID card using a RFID-RC522 reader
  * Uses MFRC522 - Library to use ARDUINO RFID MODULE KIT 13.56 MHZ WITH TAGS SPI W AND R BY COOQROBOT. 
