@@ -1,3 +1,7 @@
+1)we need to install MFRC522 Library to communicate with RFID
+2)Sketch --> Include Libraries --> Manage Libraries --> Type = MFRC522 version 1.4.10 by Github Community
+(OR) File --> Examples --> MFRC522 --> DumpInfo or ReadInfo or WriteInfo.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*
  * --------------------------------------------------------------------------------------------------------------------
  * Example sketch/program showing how to read data from a PICC to serial.
