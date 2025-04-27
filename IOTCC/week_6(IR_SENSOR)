@@ -1,3 +1,5 @@
+1)create new channel---> IR Data
+2)Sketch-->Include Library--> manage Library-->esp8266
 #include <ESP8266WiFi.h>
 String apiKey = "HF1I2YKT254XP5NR";  // write API key   
 const char *ssid =  "abc";     
