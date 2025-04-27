@@ -1,3 +1,6 @@
+1)Hardware: DHT 11
+2)Sketch --> Include library --> Manage Libraries --> Type = DHT sensor Library(1.4.6) --> Install 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #include "DHT.h"
 #define DHTPIN 2
 #define DHTTYPE DHT11
