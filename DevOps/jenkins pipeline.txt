@@ -1,0 +1,66 @@
+Jenkins artifacts continuation
+this commands are run on the sit server
+
+$ git clone https://github.com/Mahi-Repalle/practice.git
+//it start the cloning repo
+
+$ ll
+//it will show the list of file
+
+$ cd practice
+//just go to the this file path
+
+$ ll //it will show the list.
+
+$ cd src
+
+$ ll
+
+$ cd main
+
+$ ll
+
+$ cd webapp
+
+$ ll
+
+$ vim index.jsp
+//modify the index.jsp file.
+
+$ git status
+//it will show "On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.jsp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+"
+
+$ git add .
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.jsp
+
+$ git commit -m "ab"
+
+$ git push origin master
+//provide the git username and token.
+
+//go to Jenkins and open the build war file
+//click on configure
+//in "Triggers" u can select the "poll scm" and give the crontab values 5 stars.
+
+* * * * *
+//Click on apply and save the job 
+//Don’t run the build now
+//Jenkins automatically trigger the job
+//Now refresh the sit server latest code changes are reflected in the sit
+

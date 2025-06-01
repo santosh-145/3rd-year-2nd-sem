@@ -1,0 +1,68 @@
+SERVER:(open server node first and type below command)
+
+sudo apt-get update
+
+sudo passwd ubuntu
+$new password: ubuntu
+$re password: ubuntu
+
+sudo vim /etc/ssh/sshd_config
+// remove the comments for "passwordAuthentication Yes"
+//press esc+shift+: wq
+
+CONTROLLER:(then open controller node and type this commands)
+ 
+sudo apt-get update
+
+ssh-keygen
+//enter three times to generate
+//it will generate the RSA diagram
+
+vim .ssh/id_rsa.pub
+//it will show the rsa key text copy that and paste in the server node.
+//press esc+shift+: wq
+
+SERVER:(open server node and type this)
+vim .ssh/authorized_keys
+//paste the copyed rsa key in it.
+
+CONTROLLER:(again open the controller node and type above commands)
+
+ssh -v ubuntu@<serverip>
+//it will connect to server.
+
+exit
+//exit from the server node.
+
+sudo apt-get install software-properties-common
+
+
+sudo apt-get update
+
+
+sudo apt-get install -y ansible
+
+sudo vim /etc/ansible/hosts
+//paste the server ip address in it.
+//press esc+shift+: wq
+
+ansible all -i /etc/ansible/hosts -m command -a 'free'
+//it will show the text in purple and yellow color.
+
+ansible all -i/etc/ansible/hosts -m command -a 'touch d3 d4 d5'
+//it will create the files in server node.
+
+TO CHECK WHEATHER THE FILES ARE CREATED OR NOT.
+
+ssh <serverip>
+//another way to connect to server node.
+
+ls
+//it will display the files.
+
+ansible all -m apt -a 'name=tomcat8 state=present update_cache=yes' -b
+//it will download the tomcat9
+
+then copy the <serverIp> and paste in the browser along with :8080
+//it will display the successful message.
+

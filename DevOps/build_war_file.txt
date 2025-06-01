@@ -1,0 +1,101 @@
+Jenkins continuation
+
+//Go to the root directory
+sudo su -
+cd /opt
+
+//open the browser and type.
+https://maven.apache.org/download.cgi?.
+
+//Right click on the apache-maven.3.9.9.bin.tar.gz -->copy the link we get
+Wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
+//To know file name.
+ll
+
+//unzip the maven gip file.
+tar -xvzf apache-maven-3.9.9-bin.tar.gz
+
+ll
+
+//Then move the maven file.
+cd maven
+ll
+
+//u should be in path of.
+#pwd
+/opt/maven 
+
+//Go to bin
+cd bin
+//path will be /opt/maven/bin
+ll
+
+//Check the version
+mvn --version
+//it will be shown that "mvn not found" not installed
+
+//try this command.
+./mvn --version
+//it will show the version- apache maven 3.9.9
+
+//now go back to root directory.
+cd /
+//type.
+mvn --version 
+//it will be shown that "mvn not found" not installed
+
+//go to root directory again
+cd ~
+ll
+//open the .profile file
+sudo vim .profile
+
+//go to insert mode in this by pressing "i" type
+M2_HOME=/opt/maven
+M2=/opt/maven/bin
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+
+//by pressing ESC+Shift+: Wq
+
+//To get the java_home path it will show the path of java file.
+#find / -name java-21*
+
+//then type
+echo $PATH
+//U CAN'T SEE THE JAVA AND MAVEN PATH ABVOE . SO WE NEED TO RESTART THE .PROFILE FILE with below command
+
+source .profile
+echo $PATH //now u will see the path.
+
+//type
+mvn --version //it will show now version of maven.
+
+//Now go to the jenkins dashboard u need to install one plugin (maven integratin)
+//Managejenkins-->plugins-->available plugins-->maven integration plugin
+//Once installed , click on the restart Jenkins
+//U need to add java and maven paths in the jenkins 
+//Go to jenkins dashboard-->managejenkins-->tools
+
+Add JDK and add MAVEN
+JAVA -21
+/usr/lib/jvm/java-21-openjdk-amd64
+maven
+uncheck the install automatically
+/opt/maven
+
+Click on apply and save it
+
+Now we can create job for war file
+
+
+//Dashboard-->newitem-->war(give any name) select maven project click on ok
+//Source code management-->select git--> give the github url project path(open my github account-->go to the repositories
+Select the practice repository)
+//in source code management click git and add git repository.
+//Select the build  "goal and options" write the command "clean install" click on apply and save
+
+//Click on build now
+Run the job 
+Now ur job will be excuted

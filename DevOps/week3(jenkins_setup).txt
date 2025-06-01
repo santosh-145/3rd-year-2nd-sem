@@ -1,0 +1,46 @@
+//To to this Website: https://www.jenkins.io/doc/book/installing/linux/
+
+//Copy the java installation commands first.
+sudo apt update
+sudo apt install fontconfig openjdk-21-jre
+
+//To check wheather it is installed or not.
+java -version
+
+//it will show.
+openjdk version "21.0.3" 2024-04-16
+OpenJDK Runtime Environment (build 21.0.3+11-Debian-2)
+OpenJDK 64-Bit Server VM (build 21.0.3+11-Debian-2, mixed mode, sharing)
+
+
+//After that type the Jenkins installation commands.
+
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+sudo apt-get update
+
+sudo apt-get install Jenkins
+
+//Enable the Jenkins.
+sudo systemctl enable Jenkins
+
+//Start Jenkins server.
+sudo systemctl start Jenkins
+
+//To check the status of Jenkins.
+sudo systemctl status Jenkins
+
+//open the new tab and type.
+http://localhost-ip:8080
+
+//To get the default password of Jenkins type.
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+//copy the password and paste in one the Jenkins.
